@@ -6,7 +6,12 @@
   <title>Javascript Practice</title>
 </head>
 <body>
-  <p id='ex1'>Click Here To Change Name: Chris</p>
+  <div>
+    <p id='ex1'>Click Here To Change Name: Chris</p>
+  </div>
+  <div class='butt1'>
+    <button onClick="createParagraph()">Click Me</button>
+  </div>
 <script>
 const para = document.getElementById('ex1');
 
@@ -16,6 +21,13 @@ function updateName() {
   let name = prompt('Enter a new name');
   para.textContent = 'Player 1: ' + name;
 }
+
+function createParagraph() {
+  const para = document.createElement('p');
+  para.textContent = 'You clicked the button';
+  document.body.appendChild(para);
+}
+
   </script>
 </body>
 </html>
