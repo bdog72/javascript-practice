@@ -6,6 +6,16 @@
   <title>Javascript Practice</title>
 </head>
 <body>
-  <h1>Hello, World!</h1>
+  <p id='ex1'>Click Here To Change Name: Chris</p>
+<script>
+const para = document.getElementById('ex1');
+
+para.addEventListener('click', updateName);
+
+function updateName() {
+  let name = prompt('Enter a new name');
+  para.textContent = 'Player 1: ' + name;
+}
+  </script>
 </body>
 </html>

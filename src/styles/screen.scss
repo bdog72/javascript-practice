@@ -9,6 +9,18 @@ html {
 
 body {
   @include font-smoothing(on);
+
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+}
+
+#ex1 {
+  border: 1px solid black;
+  display: inline-block;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(38, 89, 244);
+  color: white;
+  letter-spacing: 1px;
 }
