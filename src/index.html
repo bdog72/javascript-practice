@@ -26,8 +26,12 @@
     <option value="snowing">Snowing</option>
     <option value="overcast">overcast</option>
   </select>
-  <h6 class='wets'></h6>
+  <h6 id='wets'></h6>
+</div
+<div>
+  <h1 id='wets1'></h1>
 </div>
+
 <script>
 const para = document.getElementById('ex1');
 
@@ -52,7 +56,7 @@ var button1 = document.getElementById('butt2');
     alert('Hello ' + name + ', nice to see you!');
 }
 const select = document.querySelector('select');
-const paras = document.querySelector('h6');
+const paras = document.getElementById('wets');
 
 select.addEventListener('change', setWeather);
 
@@ -72,6 +76,14 @@ function setWeather() {
   }
 }
 
+var dogs =['Crystal', 'Molly'];
+var info = 'My dogs are named ';
+var para1 = document.getElementById('wets1');
+
+for (var i = 0; i < dogs.length; i++) {
+  info += dogs[i] + ', ';
+}
+para1.textContent = info;
 
   </script>
 </body>
