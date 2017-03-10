@@ -76,12 +76,12 @@ function setWeather() {
   }
 }
 
-var dogs =['Crystal', 'Molly'];
+var dogs =['Crystal, ', 'Molly'];
 var info = 'My dogs are named ';
 var para1 = document.getElementById('wets1');
 
 for (var i = 0; i < dogs.length; i++) {
-  info += dogs[i] + ', ';
+  info += dogs[i] + '';
 }
 para1.textContent = info;
 
