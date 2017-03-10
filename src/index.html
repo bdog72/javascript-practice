@@ -7,13 +7,27 @@
 </head>
 <body>
   <div>
-    <p id='ex1'>Click Here To Change Name: Chris</p>
+    <p id='ex1'>Click Here to change text</p>
   </div>
 
   <div class='butt1'>
     <button onClick="createParagraph()">Click Me</button>
   </div>
 
+  <div>
+    <button id='butt2'>Press Me</button>
+  </div>
+<div>
+  <label for="weather">Select the weather type today</label>
+  <select id="weather">
+    <option value="">Make a choice</option>
+    <option value="sunny">Sunny</option>
+    <option value="rainy">Rainy</option>
+    <option value="snowing">Snowing</option>
+    <option value="overcast">overcast</option>
+  </select>
+  <h6 class='wets'></h6>
+</div>
 <script>
 const para = document.getElementById('ex1');
 
@@ -21,8 +35,8 @@ para.addEventListener('click', updateName);
 
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt('Enter new text');
+  para.textContent = 'New Text: ' + name;
 }
 
 function createParagraph() {
@@ -30,6 +44,34 @@ function createParagraph() {
   para.textContent = 'You clicked the button';
   document.body.appendChild(para);
 }
+
+var button1 = document.getElementById('butt2');
+
+  button1.onclick = function() {
+    var name = prompt('What is your name?');
+    alert('Hello ' + name + ', nice to see you!');
+}
+const select = document.querySelector('select');
+const paras = document.querySelector('h6');
+
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  if (choice === 'sunny') {
+    paras.textContent = 'Its a nice and sunny day outside today';
+  } else if (choice === 'rainy') {
+    paras.textContent = 'Rain today';
+  } else if (choice === 'snowing') {
+    paras.textContent = ' its snowing';
+  } else if (choice === 'overcast') {
+    paras.textContent = 'gray skies';
+  } else {
+    paras.textContent = '';
+  }
+}
+
 
   </script>
 </body>
